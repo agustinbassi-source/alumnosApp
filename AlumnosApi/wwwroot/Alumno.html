@@ -18,118 +18,20 @@
   <hr />
 
   Eliminar  <select id="selectAlumno"></select>
-   
+
   <br />
 
   <input type="button" value="Eliminar" onclick="eliminar()" />
 
-  <script type="text/javascript">
+  <hr />
 
-    const url = '/api/alumnos';
+  <div id="dvAlumnos"></div>
 
-    const obtenerCursos = async () => {
-
-      console.log("cargando cursos...");
-
-      let cursos = [];
-
-      await fetch('/api/cursos')
-        .then((response) => response.json())
-        .then((data) => {
-
-          cursos = data;
-        });
-
-      console.log("cursos", cursos)
-
-      let selectCursos = document.getElementById("selectCurso");
-
-      cursos.forEach(curso => {
-
-        let option = document.createElement("option");
-
-        option.text = curso.nombre;
-        option.value = curso.id;
-
-        selectCursos.add(option);
+  <script src="js/commonFetch.js"></script>
+  <script src="js/helper.js"></script>
+  <script src="js/alumno.js"></script>
 
 
-      })
-
-    }
-
-    obtenerCursos();
-
-    const obtenerAlumnos = async () => {
-
-      console.log("cargando alumnos...");
-
-      let alumnos = [];
-
-      await fetch('/api/alumnos')
-        .then((response) => response.json())
-        .then((data) => {
-
-          alumnos = data;
-        });
-
-      console.log("alumnos", alumnos)
-
-      let selectAlumnos = document.getElementById("selectAlumno");
-
-      selectAlumnos.innerHTML = '';
-
-      alumnos.forEach(alumno => {
-
-        let option = document.createElement("option");
-
-        option.text = alumno.nombre + " " + alumno.apellido;
-        option.value = alumno.id;
-
-        selectAlumnos.add(option);
-
-
-      })
-
-    }
-
-    obtenerAlumnos();
-
-    const crear = async () => {
-
-      let data = {};
-
-      // console.log(document.getElementById("selectCurso"));
-
-      data.nombre = document.getElementById("txtNombre").value;
-      data.cursoid = parseInt(document.getElementById("selectCurso").value);
-
-
-      console.log(data)
-
-      fetch(url, {
-        method: 'POST', // or 'PUT'
-        body: JSON.stringify(data), // data can be `string` or {object}!
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-
-
-    };
-
-    const eliminar = async () => {
-
-      let id = parseInt(document.getElementById("selectAlumno").value)
-
-     await fetch(url + "/" + id, {
-        method: 'DELETE'
-      })
-
-      obtenerAlumnos();
-
-    }
-  </script>
 
 </body>
 </html>
