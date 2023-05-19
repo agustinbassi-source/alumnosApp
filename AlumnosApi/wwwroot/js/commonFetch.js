@@ -1,5 +1,4 @@
-﻿
-const fetchPOST = async (url, data) => {
+﻿const fetchPOST = async (url, data) => {
 
   fetch(url, {
     method: 'POST',

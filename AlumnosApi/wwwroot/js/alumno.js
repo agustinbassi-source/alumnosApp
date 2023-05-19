@@ -78,7 +78,7 @@ const eliminar = async () => {
 
   let id = parseInt(document.getElementById("selectAlumno").value)
 
-  fetchDELETE(url + "/" + id);
+  await fetchDELETE(url + "/" + id);
 
   obtenerAlumnos();
 
