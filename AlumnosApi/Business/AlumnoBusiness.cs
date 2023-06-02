@@ -1,7 +1,7 @@
 ﻿using AlumnosApi.Modelos;
 using AlumnosApi.Repository;
 
-namespace AlumnosApi.Business
+namespace AlumnosApi.Business 
 {
     public class AlumnoBusiness
     {
