@@ -38,15 +38,16 @@ namespace AlumnosApi.Business
 
             trabajoRepository.CrearTrabajo(trabajo);
         }
+        public void EliminarTrabajo(int id)
+        {
+            trabajoRepository.EliminarTrabajo(id);
+        }
+        public void ActualizarCurso(Trabajo trabajo)
+        {
+            trabajoRepository.ActualizarTrabajo(trabajo);
+        }
 
     }
 
-    public void EliminarTrabajo(int id)
-    {
-        trabajoRepository.EliminarTrabajo(id);
-    }
-    public void ActualizarCurso(Trabajo trabajo)
-    {
-        trabajoRepository.ActualizarTrabajo(trabajo);
-    }
+    
 }
