@@ -17,7 +17,7 @@ namespace AlumnosApi.Repository
             string query = $@"SELECT [Id]
       ,[AlumnoId]
       
-       FROM [dbo].[Curso] order by Nombre ";
+       FROM [dbo].[.] order by Nombre ";
 
             con.Open();
 
