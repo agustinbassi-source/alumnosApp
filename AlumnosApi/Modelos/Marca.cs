@@ -1,10 +1,8 @@
 ﻿namespace AlumnosApi.Modelos
 {
-    public class Curso : ModeloBase
+    public class Marca : ModeloBase
     {
-
         public string Nombre { get; set; }
-        public int DocenteId { get; set; }
-
+        public List<Producto> Productos { get; set; }
     }
 }
