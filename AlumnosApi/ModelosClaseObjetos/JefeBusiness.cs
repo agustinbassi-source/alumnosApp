@@ -6,7 +6,7 @@
 
         public JefeBusiness(string asd)
         {
-            _repository = new JefeRepository(asd);
+           _repository = new JefeRepository(asd);
 
         }
 

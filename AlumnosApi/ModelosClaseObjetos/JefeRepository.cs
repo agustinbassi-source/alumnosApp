@@ -1,10 +1,27 @@
 ﻿using AlumnosApi.ModelosClaseObjetos.Models;
+using Microsoft.AspNetCore.Components.Forms;
 
 namespace AlumnosApi.ModelosClaseObjetos
 {
     public class JefeRepository
     {
         private readonly string _cnnString;
+
+        public void TestPropiedades()
+        { 
+        
+            Edificio edificio = new Edificio();
+
+            edificio.CantidadDepartamentosTotal = 100;
+            edificio.CantidadDepartamentosOcupados = 60;
+
+
+          
+
+            
+        
+        
+        }
 
         public JefeRepository(string cnn)
         {
@@ -16,7 +33,9 @@ namespace AlumnosApi.ModelosClaseObjetos
         {
             Jefe elJefe;
 
-            // hacer algo cnnString
+            //  _cnnString 
+
+            var resultado = CalculadoraHelper.Sumar(1, 3);
 
             elJefe = new Jefe();
 

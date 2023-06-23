@@ -6,12 +6,9 @@
 
         public int CantidadDepartamentosOcupados { get; set; }
 
-        private int cantDepar;
-
         public int CantidadDepartamentosDisponible
         {
-            get { return cantDepar; }
-            //set { cantDepar = value; }
+            get { return CantidadDepartamentosTotal - CantidadDepartamentosOcupados; }
         }
 
     }
